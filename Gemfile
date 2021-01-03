@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
-
+ruby '2.6.6'
 gem 'rails',      '6.1.0'
 gem 'puma',       '5.0.4'
 gem 'sass-rails', '6.0.0'
@@ -25,6 +25,10 @@ group :test do
   gem 'capybara',           '3.32.2'
   gem 'selenium-webdriver', '3.142.7'
   gem 'webdrivers',         '4.3.0'
+end
+
+group :production do
+  gem 'pg', '1.2.3'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
